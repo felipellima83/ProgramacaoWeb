@@ -1,9 +1,6 @@
 package aula02;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,6 +26,6 @@ public class ServletAgenda extends HttpServlet {
 		String nome = request.getParameter("nome");
 		String telefone = request.getParameter("telefone");
 		String nascimento = request.getParameter("nascimento");
-		response.getWriter().append("O contato "+nome+", telefone "+telefone+" e nascimento "+nascimento+" foi incluído com sucesso!");
+		response.getWriter().append("O contato " + nome + ", telefone " + telefone + " e nascimento " + nascimento + " foi incluído com sucesso!");
 	}
 }

@@ -45,9 +45,6 @@ public class MostraCadastro extends HttpServlet {
 		resposta.println("Cidade: "+ cidade);
 		resposta.println("Cep: "+ cep);
 		resposta.println("Estado: "+ estado);
-		
-		resposta.println("---------*---------*----------");
-		
 		resposta.println("Empresa: "+ empresa);
 		resposta.println("Rua Empresa: "+ rua_emp);
 		resposta.println("Logradouro Empresa: "+ logradouro_emp);

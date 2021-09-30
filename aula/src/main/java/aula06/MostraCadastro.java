@@ -1,4 +1,4 @@
-package aula6;
+package aula06;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -39,17 +39,17 @@ public class MostraCadastro extends HttpServlet {
 		String estado_empresa = (String) sessao.getAttribute("estado_empresa");
 		
 		resposta.println("Nome: "+ nome);
-		resposta.println("Sobrenome: "+ sobrenome);
+		resposta.println("Sobrenome: "+ ultimo_nome);
 		resposta.println("Rua: "+ rua);
 		resposta.println("Logradouro: "+ logradouro);
 		resposta.println("Cidade: "+ cidade);
 		resposta.println("Cep: "+ cep);
 		resposta.println("Estado: "+ estado);
 		resposta.println("Empresa: "+ empresa);
-		resposta.println("Rua Empresa: "+ rua_emp);
-		resposta.println("Logradouro Empresa: "+ logradouro_emp);
-		resposta.println("Cidade Empresa: "+ cidade_emp);
-		resposta.println("CEP empresa: "+ cep_emp);
-		resposta.println("Estado Empresa: "+ estado_emp);
+		resposta.println("Rua Empresa: "+ rua_empresa);
+		resposta.println("Logradouro Empresa: "+ logradouro_empresa);
+		resposta.println("Cidade Empresa: "+ cidade_empresa);
+		resposta.println("CEP empresa: "+ cep_empresa);
+		resposta.println("Estado Empresa: "+ estado_empresa);
 	}
 }

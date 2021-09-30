@@ -1,4 +1,4 @@
-package aula6;
+package aula06;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -44,22 +44,22 @@ public class ServletCadastro extends HttpServlet {
 		String estadoUsuario = request.getParameter(ESTADO);
 		String empresa = request.getParameter(EMPRESA);
 		String ruaEmpresa = request.getParameter(RUA_EMPRESA);
-		String complementoEmpresa = request.getParameter(LOGRADOURO_EMPRESA);
+		String logradouroEmpresa = request.getParameter(LOGRADOURO_EMPRESA);
 		String cidadeEmpresa = request.getParameter(CIDADE_EMPRESA);
 		String cepEmpresa = request.getParameter(CEP_EMPRESA);
 		String estadoEmpresa = request.getParameter(ESTADO_EMPRESA);
 		
 		HttpSession sessao = request.getSession();
-		if (nomeUsuario != null && sobrenomeUsuario != null && ruaUsuario != null && complementoUsuario != null && !nomeUsuario.isEmpty() && !sobrenomeUsuario.isEmpty() && !ruaUsuario.isEmpty() && !complementoUsuario.isEmpty()) {
+		if (nomeUsuario != null && ultimoNomeUsuario != null && ruaUsuario != null && logradouroUsuario != null && !nomeUsuario.isEmpty() && !ultimoNomeUsuario.isEmpty() && !ruaUsuario.isEmpty() && !logradouroUsuario.isEmpty()) {
 			sessao.setAttribute(NOME, nomeUsuario);
-			sessao.setAttribute(SOBRENOME, sobrenomeUsuario);
+			sessao.setAttribute(ULTIMO_NOME, ultimoNomeUsuario);
 			sessao.setAttribute(RUA, ruaUsuario);
-			sessao.setAttribute(COMPLEMENTO, complementoUsuario);
+			sessao.setAttribute(LOGRADOURO, logradouroUsuario);
 			sessao.setAttribute(CIDADE, cidadeUsuario);
 			sessao.setAttribute(CEP, cepUsuario);
 			sessao.setAttribute(ESTADO, estadoUsuario);
 		}
-		if (empresa != null && ruaEmpresa != null && complementoEmpresa != null && !empresa.isEmpty() && !ruaEmpresa.isEmpty() && !complementoEmpresa.isEmpty()) {
+		if (empresa != null && ruaEmpresa != null && logradouroEmpresa != null && !empresa.isEmpty() && !ruaEmpresa.isEmpty() && !logradouroEmpresa.isEmpty()) {
 			sessao.setAttribute(EMPRESA, empresa);
 			sessao.setAttribute(RUA_EMPRESA, ruaEmpresa);
 			sessao.setAttribute(LOGRADOURO_EMPRESA, logradouroEmpresa);

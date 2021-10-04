@@ -1,8 +1,6 @@
 package aula06;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +31,7 @@ public class ServletCadastro extends HttpServlet {
     public static final String ESTADO_EMPRESA = "estado_empresa";
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter resposta = response.getWriter();
+
 				
 		String nomeUsuario = request.getParameter(NOME);
 		String ultimoNomeUsuario = request.getParameter(ULTIMO_NOME);
